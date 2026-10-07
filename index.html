@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Ceremonial Gems | Rare Natural Gemstones</title>
+
+<meta name="description"
+      content="Discover exceptional natural gemstones from Ceremonial Gems.">
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   CEREMONIAL GEMS
+   PART 1A
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#07100d;
+    color:#f7f4ec;
+    font-family:"DM Sans",sans-serif;
+    overflow-x:hidden;
+}
+
+body::-webkit-scrollbar{
+    width:6px;
+}
+
+body::-webkit-scrollbar-track{
+    background:#07100d;
+}
+
+body::-webkit-scrollbar-thumb{
+    background:#9e7d3e;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font-family:inherit;
+}
+
+:root{
+    --gold:#d4b16a;
+    --gold-light:#f0d99d;
+    --cream:#f5f0e5;
+    --dark:#07100d;
+    --dark2:#0b1914;
+    --text:#f7f4ec;
+    --muted:#a5aaa3;
+}
+
+
+/* =====================================================
+   LOADER
+===================================================== */
+
+.cg-loader{
+    position:fixed;
+    inset:0;
+    z-index:99999;
+    background:#050806;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:
+        opacity .8s ease,
+        visibility .8s ease;
+}
+
+.cg-loader.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+.cg-loader-inner{
+    text-align:center;
+}
+
+.cg-loader-diamond{
+    width:48px;
+    height:48px;
+    border:1px solid var(--gold);
+    transform:rotate(45deg);
+    margin:auto;
+    animation:
+        loaderDiamond 1.6s ease-in-out infinite;
+}
+
+.cg-loader-name{
+    margin-top:30px;
+    font-family:"Playfair Display",serif;
+    font-size:19px;
+    letter-spacing:2px;
+}
+
+.cg-loader-sub{
+    margin-top:7px;
+    font-size:7px;
+    letter-spacing:4px;
+    color:var(--gold);
+    text-transform:uppercase;
+}
+
+@keyframes loaderDiamond{
+
+    0%,100%{
+        transform:rotate(45deg) scale(.72);
+        opacity:.4;
+    }
+
+    50%{
+        transform:rotate(45deg) scale(1);
+        opacity:1;
+    }
+}
+
+
+/* =====================================================
+   ANNOUNCEMENT BAR
+===================================================== */
+
+.cg-topbar{
+    height:34px;
+    background:#0b1712;
+    border-bottom:1px solid
+        rgba(212,177,106,.13);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    position:relative;
+    z-index:200;
+}
+
+.cg-topbar-text{
+    font-size:8px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#c9c6bc;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.cg-nav{
+    position:absolute;
+    top:34px;
+    left:0;
+    width:100%;
+    height:88px;
+    z-index:150;
+
+    transition:
+        background .4s ease,
+        height .4s ease,
+        backdrop-filter .4s ease;
+}
+
+.cg-nav.scrolled{
+    position:fixed;
+    top:0;
+    height:72px;
+    background:rgba(5,11,8,.84);
+    backdrop-filter:blur(20px);
+    border-bottom:1px solid
+        rgba(255,255,255,.08);
+}
+
+.cg-nav-inner{
+    width:min(1440px,94%);
+    height:100%;
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+
+/* LOGO */
+
+.cg-logo{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.cg-logo-mark{
+    width:32px;
+    height:32px;
+    border:1px solid var(--gold);
+    transform:rotate(45deg);
+    position:relative;
+}
+
+.cg-logo-mark::after{
+    content:"";
+    position:absolute;
+    inset:6px;
+    border:1px solid
+        rgba(212,177,106,.45);
+}
+
+.cg-logo-copy{
+    font-family:"Playfair Display",serif;
+    font-size:21px;
+    letter-spacing:1px;
+    line-height:1;
+}
+
+.cg-logo-copy small{
+    display:block;
+    margin-top:7px;
+
+    font-family:"DM Sans",sans-serif;
+    font-size:7px;
+    letter-spacing:4px;
+
+    color:var(--gold);
+    text-transform:uppercase;
+}
+
+
+/* NAV LINKS */
+
+.cg-nav-links{
+    display:flex;
+    align-items:center;
+    gap:32px;
+}
+
+.cg-nav-links a{
+    position:relative;
+
+    font-size:9px;
+    letter-spacing:1.8px;
+    text-transform:uppercase;
+
+    color:#ddd9ce;
+    transition:.3s;
+}
+
+.cg-nav-links a::after{
+    content:"";
+
+    position:absolute;
+    left:0;
+    bottom:-9px;
+
+    width:0;
+    height:1px;
+
+    background:var(--gold);
+
+    transition:.35s ease;
+}
+
+.cg-nav-links a:hover{
+    color:#fff;
+}
+
+.cg-nav-links a:hover::after{
+    width:100%;
+}
+
+
+/* NAV ACTIONS */
+
+.cg-nav-actions{
+    display:flex;
+    align-items:center;
+    gap:9px;
+}
+
+.cg-action{
+    width:38px;
+    height:38px;
+
+    border:1px solid
+        rgba(255,255,255,.13);
+
+    border-radius:50%;
+
+    display:grid;
+    place-items:center;
+
+    background:transparent;
+    color:#eee;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+}
+
+.cg-action:hover{
+    color:var(--gold);
+    border-color:var(--gold);
+    transform:translateY(-2px);
+}
+
+.cg-action svg{
+    width:15px;
+    height:15px;
+
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.4;
+}
+
+.cg-menu{
+    display:none;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.cg-hero{
+    position:relative;
+
+    min-height:100svh;
+
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+
+    background:
+        radial-gradient(
+            circle at 78% 42%,
+            rgba(25,105,78,.3),
+            transparent 34%
+        ),
+        #06100c;
+}
+
+
+/* VIDEO / IMAGE BACKGROUND */
+
+.cg-hero-visual{
+    position:absolute;
+    inset:0;
+
+    background:
+        radial-gradient(
+            ellipse at 75% 42%,
+            rgba(32,143,103,.34),
+            transparent 26%
+        ),
+        radial-gradient(
+            ellipse at 75% 43%,
+            #163d31 0%,
+            #0b2018 18%,
+            #06100c 55%
+        );
+
+    transform:scale(1.05);
+}
+
+
+/*
+FINAL VIDEO WILL REPLACE THIS VISUAL.
+
+You can later add:
+
+<video autoplay muted loop playsinline>
+    <source src="gemstone-video.mp4">
+</video>
+*/
+
+
+.cg-hero-visual::before{
+    content:"";
+
+    position:absolute;
+
+    width:330px;
+    height:330px;
+
+    right:17%;
+    top:30%;
+
+    transform:rotate(45deg);
+
+    border:1px solid
+        rgba(215,187,120,.4);
+
+    box-shadow:
+        0 0 80px
+        rgba(58,194,148,.13),
+
+        inset 0 0 60px
+        rgba(255,255,255,.05);
+
+    animation:
+        heroGemFloat 7s ease-in-out infinite;
+}
+
+.cg-hero-visual::after{
+    content:"";
+
+    position:absolute;
+    width:220px;
+    height:220px;
+
+    right:21%;
+    top:35%;
+
+    transform:rotate(45deg);
+
+    border:1px solid
+        rgba(255,255,255,.12);
+
+    animation:
+        heroGemFloatReverse 8s ease-in-out infinite;
+}
+
+@keyframes heroGemFloat{
+
+    0%,100%{
+        transform:
+            rotate(45deg)
+            translateY(0);
+    }
+
+    50%{
+        transform:
+            rotate(45deg)
+            translateY(-22px);
+    }
+}
+
+@keyframes heroGemFloatReverse{
+
+    0%,100%{
+        transform:
+            rotate(45deg)
+            translateY(0);
+    }
+
+    50%{
+        transform:
+            rotate(45deg)
+            translateY(18px);
+    }
+}
+
+
+/* HERO OVERLAY */
+
+.cg-hero-overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4,9,7,.98) 0%,
+            rgba(4,9,7,.88) 28%,
+            rgba(4,9,7,.43) 61%,
+            rgba(4,9,7,.55) 100%
+        ),
+
+        linear-gradient(
+            0deg,
+            rgba(4,9,7,.95),
+            transparent 40%
+        );
+}
+
+
+/* LIGHT ORBS */
+
+.cg-orb{
+    position:absolute;
+    border-radius:50%;
+    pointer-events:none;
+}
+
+.cg-orb.one{
+    width:420px;
+    height:420px;
+
+    right:-170px;
+    top:-110px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(212,177,106,.11),
+            transparent 67%
+        );
+
+    filter:blur(10px);
+}
+
+.cg-orb.two{
+    width:300px;
+    height:300px;
+
+    left:-150px;
+    bottom:-100px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(32,137,99,.16),
+            transparent 67%
+        );
+
+    filter:blur(12px);
+}
+
+
+/* HERO CONTENT */
+
+.cg-hero-content{
+    position:relative;
+    z-index:10;
+
+    width:min(1440px,92%);
+    margin:90px auto 0;
+}
+
+.cg-eyebrow{
+    display:flex;
+    align-items:center;
+    gap:13px;
+
+    color:var(--gold);
+
+    font-size:9px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+
+    animation:
+        heroTextUp .9s .25s both;
+}
+
+.cg-eyebrow span{
+    width:38px;
+    height:1px;
+    background:var(--gold);
+}
+
+.cg-hero-title{
+    max-width:850px;
+
+    margin-top:25px;
+
+    font-family:"Playfair Display",serif;
+    font-weight:400;
+
+    font-size:
+        clamp(58px,8vw,116px);
+
+    line-height:.91;
+
+    letter-spacing:-4px;
+
+    animation:
+        heroTextUp 1s .4s both;
+}
+
+.cg-hero-title em{
+    color:var(--gold-light);
+    font-style:italic;
+}
+
+.cg-hero-description{
+    max-width:520px;
+
+    margin-top:32px;
+
+    color:#b5b9b3;
+
+    font-size:13px;
+    line-height:1.9;
+
+    font-weight:300;
+
+    animation:
+        heroTextUp 1s .55s both;
+}
+
+.cg-hero-buttons{
+    display:flex;
+    align-items:center;
+    gap:13px;
+
+    margin-top:38px;
+
+    animation:
+        heroTextUp 1s .7s both;
+}
+
+.cg-btn{
+    min-height:52px;
+
+    padding:0 27px;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:13px;
+
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+}
+
+.cg-btn-primary{
+    color:#11150f;
+    background:var(--gold);
+}
+
+.cg-btn-primary:hover{
+    background:#efd48f;
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 16px 40px
+        rgba(212,177,106,.18);
+}
+
+.cg-btn-outline{
+    border:1px solid
+        rgba(255,255,255,.27);
+
+    color:#f7f4ec;
+}
+
+.cg-btn-outline:hover{
+    color:var(--gold);
+    border-color:var(--gold);
+    transform:translateY(-3px);
+}
+
+
+/* HERO SIDE INFO */
+
+.cg-hero-side{
+    position:absolute;
+
+    right:4.5%;
+    bottom:48px;
+
+    z-index:10;
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    color:#999e98;
+
+    font-size:7px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+
+    writing-mode:vertical-rl;
+}
+
+.cg-side-line{
+    width:1px;
+    height:58px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            var(--gold)
+        );
+}
+
+
+/* HERO STATS */
+
+.cg-hero-stats{
+    position:absolute;
+
+    right:7%;
+    bottom:50px;
+
+    z-index:10;
+
+    display:flex;
+    gap:45px;
+}
+
+.cg-stat{
+    text-align:left;
+}
+
+.cg-stat strong{
+    display:block;
+
+    font-family:"Playfair Display",serif;
+    font-size:22px;
+    font-weight:400;
+
+    color:#eee9dd;
+}
+
+.cg-stat span{
+    display:block;
+
+    margin-top:5px;
+
+    font-size:7px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    color:#818781;
+}
+
+
+/* HERO ANIMATION */
+
+@keyframes heroTextUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* =====================================================
+   INTRODUCTION STRIP
+===================================================== */
+
+.cg-intro{
+    background:var(--cream);
+    color:#111713;
+
+    padding:55px 0;
+}
+
+.cg-intro-inner{
+    width:min(1440px,92%);
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        .7fr
+        2fr
+        .7fr;
+
+    align-items:center;
+
+    gap:35px;
+}
+
+.cg-intro-label{
+    color:#817a6b;
+
+    font-size:8px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.cg-intro-title{
+    font-family:"Playfair Display",serif;
+
+    font-size:
+        clamp(26px,3vw,44px);
+
+    line-height:1.2;
+
+    font-weight:400;
+}
+
+.cg-intro-title em{
+    color:#8d6c37;
+}
+
+.cg-intro-link{
+    justify-self:end;
+
+    color:#22271f;
+
+    font-size:8px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    padding-bottom:8px;
+
+    border-bottom:
+        1px solid #9b814e;
+
+    transition:.3s;
+}
+
+.cg-intro-link:hover{
+    color:#8d6c37;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:1050px){
+
+    .cg-nav-links{
+        gap:18px;
+    }
+
+    .cg-hero-title{
+        font-size:clamp(58px,9vw,95px);
+    }
+
+    .cg-hero-visual::before{
+        right:9%;
+    }
+
+    .cg-hero-visual::after{
+        right:14%;
+    }
+
+    .cg-hero-stats{
+        display:none;
+    }
+
+}
+
+
+@media(max-width:760px){
+
+    .cg-topbar{
+        height:29px;
+    }
+
+    .cg-topbar-text{
+        font-size:6.5px;
+        letter-spacing:2px;
+    }
+
+    .cg-nav{
+        top:29px;
+        height:75px;
+    }
+
+    .cg-nav-links{
+        display:none;
+    }
+
+    .cg-logo-copy{
+        font-size:17px;
+    }
+
+    .cg-logo-copy small{
+        font-size:6px;
+        letter-spacing:3px;
+    }
+
+    .cg-logo-mark{
+        width:27px;
+        height:27px;
+    }
+
+    .cg-action{
+        width:34px;
+        height:34px;
+    }
+
+    .cg-menu{
+        display:grid;
+    }
+
+    .cg-hero{
+        min-height:850px;
+        align-items:flex-end;
+    }
+
+    .cg-hero-content{
+        margin-bottom:105px;
+    }
+
+    .cg-hero-title{
+        font-size:
+            clamp(50px,14vw,75px);
+
+        letter-spacing:-2px;
+    }
+
+    .cg-hero-description{
+        max-width:410px;
+        font-size:12px;
+        line-height:1.75;
+    }
+
+    .cg-hero-buttons{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .cg-btn{
+        width:215px;
+    }
+
+    .cg-hero-visual::before{
+        width:220px;
+        height:220px;
+
+        right:2%;
+        top:25%;
+    }
+
+    .cg-hero-visual::after{
+        width:145px;
+        height:145px;
+
+        right:12%;
+        top:30%;
+    }
+
+    .cg-hero-side{
+        display:none;
+    }
+
+    .cg-intro{
+        padding:42px 0;
+    }
+
+    .cg-intro-inner{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .cg-intro-link{
+        justify-self:start;
+    }
+
+}
+
+
+@media(max-width:430px){
+
+    .cg-nav-actions .cg-action:nth-child(1),
+    .cg-nav-actions .cg-action:nth-child(2){
+        display:none;
+    }
+
+    .cg-hero{
+        min-height:820px;
+    }
+
+    .cg-hero-title{
+        font-size:51px;
+    }
+
+    .cg-hero-description{
+        font-size:11.5px;
+    }
+
+}
+
+  </style>
+  <!-- =====================================================
+     CEREMONIAL GEMS
+     PART 1B
+===================================================== -->
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     LOADER
+===================================================== -->
+
+<div class="cg-loader" id="cgLoader">
+
+    <div class="cg-loader-inner">
+
+        <div class="cg-loader-diamond"></div>
+
+        <div class="cg-loader-name">
+            Ceremonial Gems
+        </div>
+
+        <div class="cg-loader-sub">
+            We Serve Memories
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="cg-topbar">
+
+    <div class="cg-topbar-text">
+        Natural Gemstones · Jaipur · Worldwide Selection
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="cg-nav" id="cgNavbar">
+
+    <div class="cg-nav-inner">
+
+
+        <!-- LOGO -->
+
+        <a href="#" class="cg-logo">
+
+            <div class="cg-logo-mark"></div>
+
+            <div class="cg-logo-copy">
+
+                Ceremonial Gems
+
+                <small>
+                    We Serve Memories
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <!-- LINKS -->
+
+        <nav class="cg-nav-links">
+
+            <a href="#collections">
+                Collections
+            </a>
+
+            <a href="#gemstones">
+                Gemstones
+            </a>
+
+            <a href="#origins">
+                Origins
+            </a>
+
+            <a href="#story">
+                Our Story
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- ACTIONS -->
+
+        <div class="cg-nav-actions">
+
+
+            <button class="cg-action"
+                    aria-label="Search">
+
+                <svg viewBox="0 0 24 24">
+
+                    <circle
+                        cx="11"
+                        cy="11"
+                        r="6">
+                    </circle>
+
+                    <path
+                        d="M16 16l5 5">
+                    </path>
+
+                </svg>
+
+            </button>
+
+
+            <button class="cg-action"
+                    aria-label="Account">
+
+                <svg viewBox="0 0 24 24">
+
+                    <circle
+                        cx="12"
+                        cy="8"
+                        r="3.5">
+                    </circle>
+
+                    <path
+                        d="M5 21c1-4 3-6 7-6s6 2 7 6">
+                    </path>
+
+                </svg>
+
+            </button>
+
+
+            <button class="cg-action"
+                    aria-label="Wishlist">
+
+                <svg viewBox="0 0 24 24">
+
+                    <path
+                        d="M20 8.7c0 5.3-8 10.2-8 10.2S4 14 4 8.7A4.1 4.1 0 018 5a4.4 4.4 0 014 2.2A4.4 4.4 0 0116 5a4.1 4.1 0 014 3.7z">
+                    </path>
+
+                </svg>
+
+            </button>
+
+
+            <button class="cg-action"
+                    aria-label="Shopping Cart">
+
+                <svg viewBox="0 0 24 24">
+
+                    <path
+                        d="M4 5h2l2 11h9l2-8H7">
+                    </path>
+
+                    <circle
+                        cx="10"
+                        cy="20"
+                        r="1">
+                    </circle>
+
+                    <circle
+                        cx="17"
+                        cy="20"
+                        r="1">
+                    </circle>
+
+                </svg>
+
+            </button>
+
+
+            <button
+                class="cg-action cg-menu"
+                id="cgMenu"
+                aria-label="Menu">
+
+                <svg viewBox="0 0 24 24">
+
+                    <path d="M4 7h16"></path>
+
+                    <path d="M4 12h16"></path>
+
+                    <path d="M4 17h16"></path>
+
+                </svg>
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main>
+
+
+<section class="cg-hero"
+         id="home">
+
+
+    <!-- VISUAL / VIDEO BACKGROUND -->
+
+    <div class="cg-hero-visual">
+
+        <!--
+
+        FINAL VIDEO:
+
+        <video
+            autoplay
+            muted
+            loop
+            playsinline>
+
+            <source
+                src="assets/gemstone-video.mp4"
+                type="video/mp4">
+
+        </video>
+
+        YouTube gemstone video can be embedded
+        here during prototype stage.
+
+        -->
+
+    </div>
+
+
+    <!-- DARK CINEMATIC OVERLAY -->
+
+    <div class="cg-hero-overlay"></div>
+
+
+    <!-- LIGHT EFFECTS -->
+
+    <div class="cg-orb one"></div>
+
+    <div class="cg-orb two"></div>
+
+
+    <!-- HERO CONTENT -->
+
+    <div class="cg-hero-content">
+
+
+        <div class="cg-eyebrow">
+
+            <span></span>
+
+            Exceptional Natural Gemstones
+
+        </div>
+
+
+        <h1 class="cg-hero-title">
+
+            Nature's
+
+            <br>
+
+            <em>Rarest</em>
+
+            Treasures.
+
+        </h1>
+
+
+        <p class="cg-hero-description">
+
+            Discover exceptional natural gemstones,
+            selected for their colour, character and
+            timeless beauty — sourced from remarkable
+            origins around the world.
+
+        </p>
+
+
+        <div class="cg-hero-buttons">
+
+
+            <a href="#collections"
+               class="cg-btn cg-btn-primary">
+
+                Explore Collection
+
+                <span>↗</span>
+
+            </a>
+
+
+            <a href="#story"
+               class="cg-btn cg-btn-outline">
+
+                Discover Our Story
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- HERO SIDE SCROLL -->
+
+    <div class="cg-hero-side">
+
+        <div class="cg-side-line"></div>
+
+        Scroll to discover
+
+    </div>
+
+
+    <!-- HERO STATS -->
+
+    <div class="cg-hero-stats">
+
+        <div class="cg-stat">
+
+            <strong>01</strong>
+
+            <span>
+                Natural Stones
+            </span>
+
+        </div>
+
+
+        <div class="cg-stat">
+
+            <strong>∞</strong>
+
+            <span>
+                Stories Within
+            </span>
+
+        </div>
+
+
+        <div class="cg-stat">
+
+            <strong>Jaipur</strong>
+
+            <span>
+                India
+            </span>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     INTRO STRIP
+===================================================== -->
+
+<section class="cg-intro">
+
+    <div class="cg-intro-inner">
+
+
+        <div class="cg-intro-label">
+
+            Jaipur · India
+
+        </div>
+
+
+        <h2 class="cg-intro-title">
+
+            Every stone carries a story.
+            <em>Find yours.</em>
+
+        </h2>
+
+
+        <a href="#collections"
+           class="cg-intro-link">
+
+            View gemstones →
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     NEXT PART WILL CONTINUE HERE
+===================================================== -->
+
+
+<section
+    id="collections"
+    style="
+        min-height:520px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background:#07100d;
+        text-align:center;
+        padding:80px 20px;
+    "
+>
+
+    <div>
+
+        <p style="
+            color:#d4b16a;
+            font-size:9px;
+            letter-spacing:4px;
+            text-transform:uppercase;
+            margin-bottom:20px;
+        ">
+            The Collection
+        </p>
+
+
+        <h2 style="
+            font-family:'Playfair Display',serif;
+            font-weight:400;
+            font-size:clamp(40px,6vw,76px);
+        ">
+            Crafted by Nature.
+        </h2>
+
+
+        <p style="
+            max-width:540px;
+            margin:22px auto 0;
+            color:#9da39c;
+            font-size:13px;
+            line-height:1.8;
+        ">
+
+            A world of exceptional rubies,
+            emeralds, sapphires and rare gemstones.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =====================================================
+     PART 1 JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   LOADER
+===================================================== */
+
+window.addEventListener("load",function(){
+
+    const loader =
+        document.getElementById("cgLoader");
+
+    setTimeout(function(){
+
+        loader.classList.add("hide");
+
+    },700);
+
+});
+
+
+/* =====================================================
+   STICKY NAVIGATION
+===================================================== */
+
+const cgNavbar =
+    document.getElementById("cgNavbar");
+
+
+window.addEventListener("scroll",function(){
+
+    if(window.scrollY > 60){
+
+        cgNavbar.classList.add("scrolled");
+
+    }else{
+
+        cgNavbar.classList.remove("scrolled");
+
+    }
+
+});
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const cgMenu =
+    document.getElementById("cgMenu");
+
+
+cgMenu.addEventListener("click",function(){
+
+    alert(
+        "Premium mobile navigation will open here."
+    );
+
+});
+
+
+/* =====================================================
+   BUTTON MICRO INTERACTION
+===================================================== */
+
+document
+.querySelectorAll(".cg-btn")
+.forEach(function(button){
+
+    button.addEventListener(
+        "mousedown",
+        function(){
+
+            this.style.transform =
+                "scale(.97)";
+
+        }
+    );
+
+    button.addEventListener(
+        "mouseup",
+        function(){
+
+            this.style.transform = "";
+
+        }
+    );
+
+});
+
+
+</script>
+
+
+</body>
+</html>
